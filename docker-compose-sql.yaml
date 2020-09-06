@@ -1,0 +1,13 @@
+version: "3"
+services: 
+  sql:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sql
+    ports: 
+      - "1433:1433"
+    environment: 
+      SA_PASSWORD: "ZsE41XGG"
+      ACCEPT_EULA: "Y"
+    volumes:
+      - /var/opt/mvcRestApiFullCourse/mssql:/var/opt/mssql
+      
